@@ -229,6 +229,22 @@
             /* 设置一个元素的内边距 */
 
         }
+	    .container {
+            width: 90%; /* 使用百分比 */
+            max-width: 600px; /* 最大宽度 */
+            margin: auto; /* 居中 */
+            padding: 20px;
+            text-align: center;
+        }
+        .header, .footer {
+            background-color: #f8f8f8;
+            padding: 10px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
     </style>
 </head>
 
@@ -460,6 +476,25 @@
     <p>
         物理学中最常见的方程之一：<var>E</var>=<var>m</var><var>c</var><!--物理数学上标志符-->><sup>2</sup>。
     </p>
+			<div class="container">
+        <div class="header">
+            <h1>欢迎来到我的网页</h1>
+        </div>
+        <div class="main">
+            <p id="message">这是一个简单的自适应布局示例。</p>
+            <button onclick="changeMessage()">点击我</button>
+        </div>
+        <div class="footer">
+            <p>© 2024 你的名字</p>
+        </div>
+    </div>
+
+    <script>
+        // 修改文本内容的函数
+        function changeMessage() {
+            document.getElementById('message').innerText = '你点击了按钮！';
+        }
+    </script>
 </body>
 
 </html>
