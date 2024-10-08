@@ -9,7 +9,7 @@
     <!--这是标题名字-->
     <title>&alefsym;Mandy_davi&alefsym;</title>
     <!--这是标题图片-->
-    <link href="网站图片.jpg" rel="shortcut icon">
+    <link href="图片文件/网站图片.jpg" rel="shortcut icon">
     <!--<span>没有任何语义-->
     <meta charset="utf-8" /><!--声明文档使用的字符编码-->
     <meta name=" keywords " content="HTML, CSS"><!--向搜索引擎说明网页的关键词;-->
@@ -263,54 +263,36 @@
             top: 20px;
             /*顶部的div距离*/
         }
+     /* 樱花样式 */
+     .sakura {
+      position: absolute; /* 绝对定位 */
+      top: -10px; /* 初始位置在视口顶部之外 */
+      z-index: 1; /* 确保樱花在其他元素上方显示 */
+      pointer-events: none; /* 不响应鼠标事件 */
+      animation: fall linear infinite; /* 设置动画效果 */
+    }
+
+    /* 定义樱花飘落的动画 */
+    @keyframes fall {
+      0% {
+        transform: translateY(-10%); /* 开始时向上移动 10% */
+      }
+      100% {
+        transform: translateY(110vh); /* 结束时向下移动到视口底部 110vh */
+      }
+    }
     </style>
 </head>
 
-<body style="background-color: rgb(245, 247, 247); background-image:url(背景图片.jpg)">
+<body style="background-color: rgb(245, 247, 247); background-image:url(图片文件/背景图片.jpg)">
     <!--<b>加粗有结尾-->
-    <script type="text/javascript">
-
-        /* 判断是否为pc端 */
-        function IsPC() {
-            var userAgentInfo = navigator.userAgent;
-            var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod");
-            var flag = true;
-            for (var v = 0; v < Agents.length; v++) {
-                if (userAgentInfo.indexOf(Agents[v]) > 0) {
-                    flag = false;
-                    break;
-                }
-            }
-            return flag;
-        }
-        function isMobile() {
-            var userAgentInfo = navigator.userAgent;
-            var mobileAgents = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"];
-            var mobile_flag = false;
-            //根据userAgent判断是否是手机
-            for (var v = 0; v < mobileAgents.length; v++) {
-                if (userAgentInfo.indexOf(mobileAgents[v]) > 0) {
-                    mobile_flag = true;
-                    break;
-                }
-            }
-            var screen_width = window.screen.width;
-            var screen_height = window.screen.height;
-
-            //根据屏幕分辨率判断是否是手机
-            if (screen_width < 500 && screen_height < 800) {
-                mobile_flag = true;
-            }
-            return mobile_flag;
-        }
-    </script>
     <b>
         <h1 style="text-align:center;" class="one">
-            <img src="标志.png" width="50" height="50" alt="示例图片" title="就是一张图片点什么嘛？">
+            <img src="图片文件/标志.png" width="50" height="50" alt="示例图片" title="就是一张图片点什么嘛？">
 
             <span>神域</span>
 
-            <img src="标志.png" width="50" height="50" alt="示例图片" title="就是一张图片点什么嘛？">
+            <img src="图片文件/标志.png" width="50" height="50" alt="示例图片" title="就是一张图片点什么嘛？">
         </h1>
     </b>
     <div class="nikanshenm">
@@ -332,7 +314,7 @@
         <!--超链接-->
         <div class="flex">
             <a href="图片.html">
-                <img src="表情.jpg" width="90" alt="示例图片" title="就是一张图片点什么嘛？你要点也可以">
+                <img src="图片文件/表情.jpg" width="90" alt="示例图片" title="就是一张图片点什么嘛？你要点也可以">
             </a>
             <br />
             &nbsp;
@@ -501,13 +483,72 @@
         <button onclick="scrollToBottom()">滚动到底部</button>
     </div>
     <!-- 可以添加更多内容 -->
-    <script>
+    <script type="text/javascript">
         function scrollToBottom() {
             window.scrollTo({
                 top: document.body.scrollHeight,
                 behavior: 'smooth' // 平滑滚动
             });
+        }    
+/* 判断是否为pc端 */
+function IsPC() {
+    var userAgentInfo = navigator.userAgent;
+    var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod");
+    var flag = true;
+    for (var v = 0; v < Agents.length; v++) {
+        if (userAgentInfo.indexOf(Agents[v]) > 0) {
+            flag = false;
+            break;
         }
+    }
+    return flag;
+}
+function isMobile() {
+    var userAgentInfo = navigator.userAgent;
+    var mobileAgents = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"];
+    var mobile_flag = false;
+    //根据userAgent判断是否是手机
+    for (var v = 0; v < mobileAgents.length; v++) {
+        if (userAgentInfo.indexOf(mobileAgents[v]) > 0) {
+            mobile_flag = true;
+            break;
+        }
+    }
+    var screen_width = window.screen.width;
+    var screen_height = window.screen.height;
+
+    //根据屏幕分辨率判断是否是手机
+    if (screen_width < 500 && screen_height < 800) {
+        mobile_flag = true;
+    }
+    return mobile_flag;
+}
+   // 创建樱花的函数
+   function createSakura() {
+      const sakura = document.createElement('div'); // 创建一个新的 div 元素
+      sakura.className = 'sakura'; // 设置类名为 'sakura'
+
+      // 随机生成樱花的位置和动画持续时间
+      const left = Math.random() * window.innerWidth; // 随机水平位置
+      const animationDuration = Math.random() * 6 + 3; // 随机动画持续时间（3到9秒之间）
+
+      // 设置樱花的位置和动画时长
+      sakura.style.left = `${left}px`; // 设置水平位置
+      sakura.style.animationDuration = `${animationDuration}s`; // 设置动画时长
+
+      sakura.innerHTML = '&#x1F338;'; // 使用 Unicode 字符表示樱花（🌸）
+
+      document.body.appendChild(sakura); // 将樱花元素添加到文档中
+
+      // 动画结束后移除樱花元素
+      sakura.addEventListener('animationend', () => {
+        sakura.parentNode.removeChild(sakura); // 从 DOM 中移除樱花
+      });
+    }
+
+    // 每 500 毫秒生成一个樱花元素
+    setInterval(createSakura, 500);
+
     </script>
 </body>
 
