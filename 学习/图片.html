@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!--这一行代码的主要作用是指定文档的字符编码为 UTF-8
+    从而确保网页在不同的浏览器和语言环境中都能够正确显示其内容。-->
+    <meta name="viewport" content="width=divice-width,intial-scale=1.0">
+    <!--这是标题名字-->
+    <title>&alefsym;Mandy_davi&alefsym;</title>
+    <!--这是标题图片-->
+    <link href="图片文件/网站图片.jpg" rel="shortcut icon">
+    <!--<span>没有任何语义-->
+    <meta charset="utf-8" /><!--声明文档使用的字符编码-->
+    <meta name=" keywords " content="HTML, CSS"><!--向搜索引擎说明网页的关键词;-->
+    <meta name=" description " content=""><!--告诉搜索引擎站点的主要内容码-->
+    <meta name="robots" content="noindex,nofollow"><!--是否引导网络机器人登录-->
+    <meta name="author" content="&alefsym;Mandy_davi&alefsym;"><!--告诉搜索引擎站点制作的作者-->
+    <title>鼠标悬停显示文字示例</title>
+    <style>
+        .image-container {
+            position: relative; /* 设置容器为相对定位 */
+            display: inline-block; /* 使容器与图片宽度一致 */
+        }
+
+        .image-container img {
+            width: 300px; /* 图片宽度 */
+            height: auto; /* 高度自动调整 */
+            display: block; /* 防止底部出现间隙 */
+        }
+
+        .overlay {
+            position: absolute; /* 绝对定位 */
+            top: 50%; /* 垂直居中 */
+            left: 50%; /* 水平居中 */
+            transform: translate(-50%, -50%); /* 使文字完全居中 */
+            color: white; /* 文字颜色 */
+            font-size: 24px; /* 字体大小 */
+            background-color: rgba(0, 0, 0, 0.7); /* 背景半透明 */
+            padding: 10px; /* 内边距 */
+            border-radius: 5px; /* 边角圆滑 */
+            opacity: 0; /* 初始状态透明 */
+            transition: opacity 0.3s; /* 动画效果 */
+        }
+
+        .image-container:hover .overlay {
+            opacity: 1; /* 鼠标悬停时显示文字 */
+        }
+    </style>
+</head>
+<body>
+    <h2>鼠标悬停显示文字示例</h2>
+    <div class="image-container">
+        <img src="你的图片链接.jpg" alt="示例图片" title="这里是文字" style="width: 300px;">
+
+        <div class="overlay">这里是文字</div> <!-- 文字层 -->
+    </div>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <div>
+    <a href="index.html">返回主页</a>
+    </div>
+</body>
+</html>
