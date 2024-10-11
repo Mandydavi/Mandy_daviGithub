@@ -9,26 +9,41 @@
     <!--这是标题名字-->
     <title>&alefsym;Mandy_davi&alefsym;</title>
     <!--这是标题图片-->
-    <link href="网站图片.jpg" rel="shortcut icon">
+    <link href="图片文件/网站图片.jpg" rel="shortcut icon">
     <!--<span>没有任何语义-->
     <meta charset="utf-8" /><!--声明文档使用的字符编码-->
     <meta name=" keywords " content="HTML, CSS"><!--向搜索引擎说明网页的关键词;-->
     <meta name=" description " content=""><!--告诉搜索引擎站点的主要内容码-->
     <meta name="robots" content="noindex,nofollow"><!--是否引导网络机器人登录-->
     <meta name="author" content="&alefsym;Mandy_davi&alefsym;"><!--告诉搜索引擎站点制作的作者-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style type="text/css">
         /*第一个css*/
         .one {
-            background-color: darkgray;
-            color: rgb(233, 79, 138);
-            width: 110%;
-            height: 5px;
+            background-color:gray;
+            width: 100%;
+            height: 10px;
+        }
+               /* 电脑端样式，宽度大于等于 768px */
+               @media (min-width: 768px) {
+            .desktop-content {
+                display: block; /* 电脑端显示 */
+            }
+        }
+
+        /* 手机端样式，宽度小于 768px */
+        @media (max-width: 767px) {
+            .mobile-content {
+                display: block; /* 手机端显示 */
+            }
         }
 
         /*网页设置*/
         html {
-            font-family: 'Courier New', Courier, monospace;
+            font-family:仿宋;
             font-size: 15px;
+            scroll-behavior: auto; /* 禁用平滑滚动 */
+            
         }
 
         /*设置css样式定义*/
@@ -54,17 +69,15 @@
 
         /*点击后页面将自动滚动到底部*/
         #header {
-            height: 10px;
-            padding: 10px;
-            text-align: center;
             position: absolute;
             /*absolute：生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位；
             fixed：生成绝对定位的元素，相对于浏览器窗口进行定位；
             relative： 生成相对定位的元素，相对于其正常位置进行定位。*/
-            left: 62%;
+            left: 85%;
             /*下面的div距离页面左侧*/
-            top: 100%;
+            top: 10px;
             /*顶部的div距离*/
+          
         }
 
         button {
@@ -106,9 +119,9 @@
             /*absolute：生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位；
             fixed：生成绝对定位的元素，相对于浏览器窗口进行定位；
             relative： 生成相对定位的元素，相对于其正常位置进行定位。*/
-            left: 45%;
+            left: 40%;
             /*下面的div距离页面左侧*/
-            top: 70%;
+            top: 9%;
             /*顶部的div距离*/
         }
 
@@ -128,6 +141,7 @@
             /* 合并边框 */
             height: 100px;
             /* 设置表格高度为 300 像素 */
+            width: 110%;
             color: brown;
             /* 表格文本颜色为棕色 */
             border: 1px solid black;
@@ -172,21 +186,21 @@
             /*absolute：生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位；
             fixed：生成绝对定位的元素，相对于浏览器窗口进行定位；
             relative： 生成相对定位的元素，相对于其正常位置进行定位。*/
-            left: 220px;
+            left: 1px;
             /*下面的div距离页面左侧*/
-            top: 70px
+            top: 133px
                 /*顶部的div距离*/
         }
 
         /*作业布局边框设置*/
         .flex-item {
-            width: 120px;
+            width: 150px;
             /* 每个项占据的宽度 */
-            height: 50px;
+            height: 70px;
             /* 每个项占据的高度 */
             background-color: darkturquoise;
             /* 设置背景颜色 */
-            padding: 20px;
+            padding: 10px;
             /* 设置一个元素的内边距 */
             text-align: center;
             /* 水平居中 */
@@ -194,7 +208,7 @@
             /* 垂直居中 */
         }
 
-        /*符号*/
+        /*声明*/
         .nikanshenm {
             position: absolute;
             /*absolute：生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位；
@@ -202,9 +216,9 @@
             relative： 生成相对定位的元素，相对于其正常位置进行定位。*/
             left: 1px;
             /*下面的div距离页面左侧*/
-            top: 18px;
+            top: 5px;
             /*顶部的div距离*/
-            font-size: 6px;
+            font-size: 5px;
             /*字体大小*/
         }
 
@@ -214,9 +228,9 @@
             /*absolute：生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位；
             fixed：生成绝对定位的元素，相对于浏览器窗口进行定位；
             relative： 生成相对定位的元素，相对于其正常位置进行定位。*/
-            left: 5%;
+            left: 3%;
             /*下面的div距离页面左侧*/
-            top: 90px
+            top: 30px
                 /*顶部的div距离*/
         }
 
@@ -228,27 +242,27 @@
             relative： 生成相对定位的元素，相对于其正常位置进行定位。*/
             left: 1px;
             /*下面的div距离页面左侧*/
-            top: 51%;
+            top: 22%;
             /*顶部的div距离*/
             font-size: 12px;
         }
 
         /*无序列表位置设置*/
         .loic {
-            width: 100px;
+            width: 110px;
             /* 每个项占据的宽度 */
             height: 120px;
             /* 每个项占据的高度 */
-            background-color: aquamarine;
+            background-color:aqua;
             /* 设置背景颜色 */
-            padding: 20px;
+            padding: 11px;
             /* 设置一个元素的内边距 */
-            font-size: 10px;
+            font-size: 8px;
             position: absolute;
             /*absolute：生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位；
             fixed：生成绝对定位的元素，相对于浏览器窗口进行定位；
             relative： 生成相对定位的元素，相对于其正常位置进行定位。*/
-            top: 28%;
+            top: 15%;
             /*顶部的div距离*/
 
         }
@@ -258,41 +272,413 @@
             /*absolute：生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位；
             fixed：生成绝对定位的元素，相对于浏览器窗口进行定位；
             relative： 生成相对定位的元素，相对于其正常位置进行定位。*/
-            left: 8%;
+            left: 6%;
             /*下面的div距离页面左侧*/
             top: 20px;
             /*顶部的div距离*/
         }
-     /* 樱花样式 */
-     .sakura {
-      position: absolute; /* 绝对定位 */
-      top: -10px; /* 初始位置在视口顶部之外 */
-      z-index: 1; /* 确保樱花在其他元素上方显示 */
-      pointer-events: none; /* 不响应鼠标事件 */
-      animation: fall linear infinite; /* 设置动画效果 */
-    }
 
-    /* 定义樱花飘落的动画 */
-    @keyframes fall {
-      0% {
-        transform: translateY(-10%); /* 开始时向上移动 10% */
-      }
-      100% {
-        transform: translateY(110vh); /* 结束时向下移动到视口底部 110vh */
-      }
-    }
+        /* 樱花样式 */
+        .sakura {
+            position: absolute;
+            /* 绝对定位 */
+            top: -10px;
+            /* 初始位置在视口顶部之外 */
+            z-index: 1;
+            /* 确保樱花在其他元素上方显示 */
+            pointer-events: none;
+            /* 不响应鼠标事件 */
+            animation: fall linear infinite;
+            /* 设置动画效果 */
+        }
+
+        /* 定义樱花飘落的动画 */
+        @keyframes fall {
+            0% {
+                transform: translateY(-10%);
+                /* 开始时向上移动 10% */
+            }
+
+            100% {
+                transform: translateY(310vh);
+                /* 结束时向下移动到视口底部 110vh */
+            }
+        }
+
+        /* 通用选择器，用于设置 box-sizing 和定位 */
+        *,
+        *:before,
+        *:after {
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        /* 定义 CSS 变量，用于颜色和动画 */
+        :root {
+            --color-bg: #FDF1F2;
+            /* 背景颜色 */
+            --color-heart: #EA442B;
+            /* 心形颜色 */
+            --easing: cubic-bezier(.7, 0, .3, 1);
+            /* 动画缓动函数 */
+            --duration: .5s;
+            /* 动画持续时间 */
+        }
+
+        /* 喜欢按钮的样式 */
+        .like-button {
+            font-size: 10vmin;
+            /* 响应式字体大小 */
+            appearance: none;
+            /* 移除默认按钮样式 */
+            border: none;
+            /* 无边框 */
+            border-radius: 50%;
+            /* 圆形按钮 */
+            width: 1em;
+            /* 宽度 */
+            height: 1em;
+            /* 高度 */
+            padding: 0;
+            /* 无内边距 */
+            margin: 0;
+            /* 无外边距 */
+            outline: none;
+            /* 移除聚焦时的轮廓 */
+            z-index: 2;
+            /* 堆叠顺序 */
+            transition: transform var(--duration) var(--easing);
+            /* 缩放过渡 */
+            cursor: pointer;
+            /* 鼠标悬停时为指针 */
+        }
+
+        /* 按钮的阴影效果 */
+        .like-button:before {
+            z-index: -1;
+            /* 在按钮后面 */
+            content: "";
+            /* 空内容，用于伪元素 */
+            position: absolute;
+            /* 定位 */
+            top: 0;
+            left: 0;
+            width: 100%;
+            /* 全宽 */
+            height: 100%;
+            /* 全高 */
+            box-shadow: 0 0.3em 0.6em rgba(0, 0, 0, 0.3);
+            /* 阴影效果 */
+            border-radius: inherit;
+            /* 继承圆角 */
+            transition: inherit;
+            /* 继承过渡属性 */
+        }
+
+        /* 按钮的二次背景 */
+        .like-button:after {
+            content: "";
+            /* 空内容，用于伪元素 */
+            position: absolute;
+            /* 定位 */
+            top: 0;
+            left: 0;
+            width: 100%;
+            /* 全宽 */
+            height: 100%;
+            /* 全高 */
+            background-color: #fff;
+            /* 背景颜色 */
+            border-radius: inherit;
+            /* 继承圆角 */
+            z-index: -1;
+            /* 在按钮后面 */
+        }
+
+        /* 按钮按下时的动画效果 */
+        .like-button:active:before {
+            animation: depress-shadow var(--duration) var(--easing) both;
+            /* 触发动画 */
+        }
+
+        /* 聚焦时的动画效果 */
+        .like-button:focus:after {
+            animation: depress var(--duration) var(--easing) both;
+            /* 触发动画 */
+        }
+
+        /* 按钮下压效果的关键帧 */
+        @keyframes depress {
+
+            from,
+            to {
+                transform: none;
+            }
+
+            50% {
+                transform: translateY(5%) scale(0.9);
+            }
+
+            /* 缩放效果 */
+        }
+
+        /* 阴影下压效果的关键帧 */
+        @keyframes depress-shadow {
+
+            from,
+            to {
+                transform: none;
+            }
+
+            50% {
+                transform: scale(0.5);
+            }
+
+            /* 缩放效果 */
+        }
+
+        /* 用于居中喜欢按钮的包装器 */
+        .like-wrapper {
+            display: grid;
+            /* 使用网格布局 */
+            align-items: center;
+            /* 垂直居中对齐 */
+            justify-content: center;
+            /* 水平居中对齐 */
+            z-index: 1;
+            /* 堆叠顺序 */
+        }
+
+        /* 在包装器中居中子元素 */
+        .like-wrapper>* {
+            margin: auto;
+            /* 居中对齐 */
+            grid-area: 1/1;
+            /* 放置在网格中 */
+        }
+
+        /* 心形的样式 */
+        .heart {
+            width: 0.5em;
+            /* 宽度 */
+            height: 0.5em;
+            /* 高度 */
+            display: block;
+            /* 块级显示 */
+            transform-origin: center 80%;
+            /* 缩放原点 */
+        }
+
+        /* 心形路径样式 */
+        .heart>path {
+            stroke: var(--color-heart);
+            /* 描边颜色 */
+            stroke-width: 2;
+            /* 描边宽度 */
+            fill: transparent;
+            /* 默认无填充 */
+            transition: fill var(--duration) var(--easing);
+            /* 填充颜色变化的过渡 */
+        }
+
+        /* 聚焦时更改心形填充 */
+        .like-button:focus .heart>path {
+            fill: var(--color-heart);
+            /* 填充心形颜色 */
+        }
+
+        /* 聚焦时的弹跳效果 */
+        .like-button:focus .heart {
+            animation: heart-bounce var(--duration) var(--easing);
+            /* 触发动画 */
+        }
+
+        /* 心形弹跳效果的关键帧 */
+        @keyframes heart-bounce {
+            40% {
+                transform: scale(0.7);
+            }
+
+            /* 缩小 */
+            0%,
+            80%,
+            100% {
+                transform: scale(1);
+            }
+
+            /* 恢复原大小 */
+        }
+
+        /* 粒子效果的容器 */
+        .particles {
+            width: 1px;
+            /* 宽度 */
+            height: 1px;
+            /* 高度 */
+        }
+
+        /* 粒子的样式 */
+        .particle {
+            position: absolute;
+            /* 定位 */
+            top: 0;
+            left: 0;
+            height: 0.1em;
+            /* 高度 */
+            width: 0.1em;
+            /* 宽度 */
+            border-radius: 0.05em;
+            /* 圆角 */
+            background-color: var(--color);
+            /* 粒子颜色 */
+            --percentage: calc(var(--i) / var(--total-particles));
+            /* 计算比例 */
+            --Θ: calc(var(--percentage) * 1turn);
+            /* 计算角度 */
+            transform: translate(-50%, -50%) rotate(var(--Θ)) translateY(0) scaleY(0);
+            /* 初始变换 */
+            transition: all var(--duration) var(--easing);
+            /* 过渡效果 */
+        }
+
+        /* 聚焦时粒子动画效果 */
+        .like-button:focus .particle {
+            animation: particles-out calc(var(--duration) * 1.2) var(--easing) forwards;
+            /* 触发动画 */
+        }
+
+        /* 粒子飞出效果的关键帧 */
+        @keyframes particles-out {
+            50% {
+                height: 0.3em;
+            }
+
+            /* 中间高度 */
+            50%,
+            60% {
+                height: 0.3em;
+                transform: translate(-50%, -50%) rotate(var(--Θ)) translateY(0.8em) scale(1);
+            }
+
+            /* 中间位置 */
+            60% {
+                height: 0.2em;
+            }
+
+            /* 高度变化 */
+            100% {
+                transform: translate(-50%, -50%) rotate(var(--Θ)) translateY(1em) scale(0);
+            }
+
+            /* 最终变换 */
+        }
+
+        /* 波纹效果的容器 */
+        .ripple {
+            height: 1em;
+            /* 高度 */
+            width: 1em;
+            /* 宽度 */
+            border-radius: 50%;
+            /* 圆形 */
+            overflow: hidden;
+            /* 溢出隐藏 */
+            z-index: 1;
+            /* 堆叠顺序 */
+        }
+
+        /* 波纹的样式 */
+        .ripple:before {
+            content: "";
+            /* 空内容 */
+            position: absolute;
+            /* 定位 */
+            top: 0;
+            left: 0;
+            width: 100%;
+            /* 全宽 */
+            height: 100%;
+            /* 全高 */
+            border: 0.4em solid var(--color-heart);
+            /* 边框颜色 */
+            border-radius: inherit;
+            /* 继承圆角 */
+            transform: scale(0);
+            /* 初始缩放 */
+        }
+
+        /* 聚焦时波纹动画效果 */
+        .like-button:focus .ripple:before {
+            animation: ripple-out var(--duration) var(--easing);
+            /* 触发动画 */
+        }
+
+        /* 波纹扩展效果的关键帧 */
+        @keyframes ripple-out {
+            from {
+                transform: scale(0);
+            }
+
+            /* 初始状态 */
+            to {
+                transform: scale(5);
+            }
+
+            /* 最终状态 */
+        }
+
+        /* 点击时重置动画 */
+        .like-button:focus {
+            pointer-events: none;
+            /* 禁用点击事件 */
+            cursor: normal;
+            /* 鼠标指针恢复正常 */
+        }
+        /* 爱心位置 */     
+        .mna {
+            position: absolute;
+            /*absolute：生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位；
+            fixed：生成绝对定位的元素，相对于浏览器窗口进行定位；
+            relative： 生成相对定位的元素，相对于其正常位置进行定位。*/
+            left: 30%;
+            /*下面的div距离页面左侧*/
+            top: 410px;
+            /*顶部的div距离*/
+        }
+        .container {
+            padding: 20px;
+            /* 设置容器的内边距为20像素 */
+        }
+
+        .desktop-content {
+            display: none;
+            /* 默认情况下，电脑端内容隐藏 */
+        }
+
+        .mobile-content {
+            display: none;
+            /* 默认情况下，手机端内容隐藏 */
+        }
+
+        /* 电脑端样式，适用于宽度大于等于 768px 的设备 */
+        @media (min-width: 768px) {
+            .desktop-content {
+                display: block;
+                /* 当屏幕宽度大于等于768像素时，显示电脑端内容 */
+            }
+        }
     </style>
 </head>
 
-<body style="background-color: rgb(245, 247, 247); background-image:url(背景图片.jpg)">
+<body style="background-color: rgb(245, 247, 247); background-image:url(图片文件/背景图片.jpg)">
     <!--<b>加粗有结尾-->
     <b>
         <h1 style="text-align:center;" class="one">
-            <img src="标志.png" width="50" height="50" alt="示例图片" title="就是一张图片点什么嘛？">
+            <img src="图片文件/标志.png" width="50" height="50" alt="示例图片" title="就是一张图片点什么嘛？">
 
             <span>神域</span>
 
-            <img src="标志.png" width="50" height="50" alt="示例图片" title="就是一张图片点什么嘛？">
+            <img src="图片文件/标志.png" width="50" height="50" alt="示例图片" title="就是一张图片点什么嘛？">
         </h1>
     </b>
     <div class="nikanshenm">
@@ -314,7 +700,7 @@
         <!--超链接-->
         <div class="flex">
             <a href="图片.html">
-                <img src="表情.jpg" width="90" alt="示例图片" title="就是一张图片点什么嘛？你要点也可以">
+                <img src="图片文件/表情.jpg" width="90" alt="示例图片" title="就是一张图片点什么嘛？你要点也可以">
             </a>
             <br />
             &nbsp;
@@ -480,74 +866,88 @@
         物理学中最常见的方程之一：<var>E</var>=<var>m</var><var>c</var><!--物理数学上标志符-->><sup>2</sup>。
     </p>
     <div id="header">
-        <button onclick="scrollToBottom()">滚动到底部</button>
+        <button onclick="scrollToBottom()">底部</button>
+    </div>
+    <div class="container">
+        <!-- 页面内容容器，包含电脑和手机端的内容 -->
+
+        <!-- 电脑端内容 -->
+        <div class="desktop-content">
+            <!-- 该块内容只在电脑端显示（屏幕宽度大于等于768px） -->
+            <h1>欢迎访问电脑端页面</h1>
+            <!-- 标题文字，显示在电脑端 -->
+            <p>这是适合在大屏幕上浏览的内容。</p>
+            <!-- 描述文字，显示在电脑端 -->
+        </div>
+
+        <!-- 手机端内容 -->
+        <div class="mobile-content">
+            <!-- 该块内容只在手机端显示（屏幕宽度小于768px） -->
+            <h1>欢迎访问手机端页面</h1>
+            <!-- 标题文字，显示在手机端 -->
+            <p>这是适合在手机上浏览的内容。</p>
+            <!-- 描述文字，显示在手机端 -->
+        </div>
     </div>
     <!-- 可以添加更多内容 -->
+    <div class="mna">
+        <button class="like-button">
+            <div class="like-wrapper">
+                <div class="ripple"></div> <!-- 波纹效果 -->
+                <svg class="heart" width="24" height="24" viewBox="0 0 24 24">
+                    <path
+                        d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z">
+                    </path>
+                </svg>
+                <div class="particles" style="--total-particles: 6">
+                    <!-- 粒子效果 -->
+                    <div class="particle" style="--i: 1; --color: #7642F0"></div>
+                    <div class="particle" style="--i: 2; --color: #AFD27F"></div>
+                    <div class="particle" style="--i: 3; --color: #DE8F4F"></div>
+                    <div class="particle" style="--i: 4; --color: #D0516B"></div>
+                    <div class="particle" style="--i: 5; --color: #5686F2"></div>
+                    <div class="particle" style="--i: 6; --color: #D53EF3"></div>
+                </div>
+            </div>
+        </button>
+        <script>
+            let b = document.querySelector('button'); // 选择按钮
+            setTimeout(() => b.focus(), 100); // 100ms 后聚焦按钮
+            setTimeout(() => b.blur(), 1000); // 1000ms 后取消聚焦
+        </script>
+    </div>
     <script type="text/javascript">
         function scrollToBottom() {
             window.scrollTo({
                 top: document.body.scrollHeight,
                 behavior: 'smooth' // 平滑滚动
             });
-        }    
-/* 判断是否为pc端 */
-function IsPC() {
-    var userAgentInfo = navigator.userAgent;
-    var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod");
-    var flag = true;
-    for (var v = 0; v < Agents.length; v++) {
-        if (userAgentInfo.indexOf(Agents[v]) > 0) {
-            flag = false;
-            break;
         }
-    }
-    return flag;
-}
-function isMobile() {
-    var userAgentInfo = navigator.userAgent;
-    var mobileAgents = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"];
-    var mobile_flag = false;
-    //根据userAgent判断是否是手机
-    for (var v = 0; v < mobileAgents.length; v++) {
-        if (userAgentInfo.indexOf(mobileAgents[v]) > 0) {
-            mobile_flag = true;
-            break;
+        // 创建樱花的函数
+        function createSakura() {
+            const sakura = document.createElement('div'); // 创建一个新的 div 元素
+            sakura.className = 'sakura'; // 设置类名为 'sakura'
+
+            // 随机生成樱花的位置和动画持续时间
+            const left = Math.random() * window.innerWidth; // 随机水平位置
+            const animationDuration = Math.random() * 9 + 9; // 随机动画持续时间（3到9秒之间）
+
+            // 设置樱花的位置和动画时长
+            sakura.style.left = `${left}px`; // 设置水平位置
+            sakura.style.animationDuration = `${animationDuration}s`; // 设置动画时长
+
+            sakura.innerHTML = '&#x1F338;'; // 使用 Unicode 字符表示樱花（🌸）
+
+            document.body.appendChild(sakura); // 将樱花元素添加到文档中
+
+            // 动画结束后移除樱花元素
+            sakura.addEventListener('animationend', () => {
+                sakura.parentNode.removeChild(sakura); // 从 DOM 中移除樱花
+            });
         }
-    }
-    var screen_width = window.screen.width;
-    var screen_height = window.screen.height;
 
-    //根据屏幕分辨率判断是否是手机
-    if (screen_width < 500 && screen_height < 800) {
-        mobile_flag = true;
-    }
-    return mobile_flag;
-}
-   // 创建樱花的函数
-   function createSakura() {
-      const sakura = document.createElement('div'); // 创建一个新的 div 元素
-      sakura.className = 'sakura'; // 设置类名为 'sakura'
-
-      // 随机生成樱花的位置和动画持续时间
-      const left = Math.random() * window.innerWidth; // 随机水平位置
-      const animationDuration = Math.random() * 6 + 3; // 随机动画持续时间（3到9秒之间）
-
-      // 设置樱花的位置和动画时长
-      sakura.style.left = `${left}px`; // 设置水平位置
-      sakura.style.animationDuration = `${animationDuration}s`; // 设置动画时长
-
-      sakura.innerHTML = '&#x1F338;'; // 使用 Unicode 字符表示樱花（🌸）
-
-      document.body.appendChild(sakura); // 将樱花元素添加到文档中
-
-      // 动画结束后移除樱花元素
-      sakura.addEventListener('animationend', () => {
-        sakura.parentNode.removeChild(sakura); // 从 DOM 中移除樱花
-      });
-    }
-
-    // 每 500 毫秒生成一个樱花元素
-    setInterval(createSakura, 500);
+        // 每 500 毫秒生成一个樱花元素
+        setInterval(createSakura, 5000);
 
     </script>
 </body>
